@@ -1,68 +1,40 @@
 import { useReducer, useState } from "react";
+import BasicExample from "./TodoTable";
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
-      return [...state,{...action.data, complete:false}];
+      if (state.some((todo) => todo.id === action.data.id)) {
+        return state;
+      }
+      return [...state, { ...action.data, complete: false }];
 
     case "EDIT":
-        return state.map((todo) => todo.id === action.data.id ? { ...todo, title: action.data.title } : todo);
+      return state.map((todo) =>
+        todo.id === action.data.id
+          ? { ...todo, title: action.data.title }
+          : todo
+      );
 
     case "DELETE":
-        return state.filter(todo => todo.id !== action.data.id);
- 
-    case "DELETE ALL":
+      return state.filter((todo) => todo.id !== action.data.id);
+
+    case "DELETEALL":
       return [];
-      
+
     default:
       return state;
   }
 };
 
-
 const Todos = () => {
-    const [input, setInput] = useState({})
-    const [state, dipatcher] = useReducer(reducer, []);
+  const [input, setInput] = useState({});
+  const [state, dispatch] = useReducer(reducer, []);
+
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>Title</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>id</td>
-            <td>title</td>
-            <td>      <button
-        onClick={() => {
-          dipatcher({ type: "EDIT", data: input });
-        }}
-      >
-        EDIT
-      </button>
-      <button
-        onClick={() => {
-          dipatcher({ type: "DELETE", data: input });
-        }}
-      >
-        DELETE
-      </button>
-      <button
-        onClick={() => {
-          dipatcher({ type: "DELETE ALL", data: 0 });
-        }}
-      >
-        DELETE ALL
-      </button></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h1>{JSON.stringify(state)}</h1>
+      <h1>TODO APP</h1>
+      <BasicExample todos={state} dispatch={dispatch} />
       <input
         type="text"
         onChange={(e) => setInput({ ...input, id: e.target.value })}
@@ -71,14 +43,11 @@ const Todos = () => {
         type="text"
         onChange={(e) => setInput({ ...input, title: e.target.value })}
       />
-      <button
-        onClick={() => {
-          dipatcher({ type: "ADD", data: input });
-        }}
-      >
-        ADD
-      </button>
+      <button onClick={() => dispatch({ type: "ADD", data: input })}>ADD</button>
+      <button onClick={() => dispatch({ type: "EDIT", data: input })}>EDIT</button>
+      <button onClick={() => dispatch({ type: "DELETEALL", data : 0 })}>CLEAR TABLE</button>
     </div>
   );
 };
+
 export default Todos;

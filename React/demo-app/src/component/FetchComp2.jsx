@@ -234,7 +234,7 @@ const FetchComponent = () => {
         { ...inputData }
       );
       setResponseData(response.data.data);
-      window.location.reload(); // Refresh the page
+      window.location.reload();
     } catch (error) {
       console.error("Error posting data:", error);
     }
@@ -248,7 +248,7 @@ const FetchComponent = () => {
         { ...updatedData }
       );
       setResponseData(response.data.data);
-      window.location.reload(); // Refresh the page
+      window.location.reload();
     } catch (error) {
       console.error("Error updating data:", error);
     }
@@ -260,7 +260,7 @@ const FetchComponent = () => {
         `https://p-9x7e.onrender.com/products/delete-product/${inputData.deleteId}`
       );
       setResponseData(response.data.data);
-      window.location.reload(); // Refresh the page
+      window.location.reload();
     } catch (error) {
       console.error("Error deleting data:", error);
     }
