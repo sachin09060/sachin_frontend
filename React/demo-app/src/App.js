@@ -9,8 +9,8 @@ import './App.css';
 // import DynamicContent from './component/DynamicContent';
 // import Rendering from './component/RenderingComp';
 // import ToggleContent from './component/ToggleContent';
-import Todos from './component/Todo';
-// import FetchComp2 from './component/FetchComp2';
+// import Todos from './component/Todo';
+import FetchComp2 from './component/FetchComp2';
 // import NewForm from './component/NewForm';
 
 function App() {
@@ -25,9 +25,9 @@ function App() {
       <ToggleContent/> */}
       {/* <Parent name="sachin" age="23"/> */}
       {/* <ReducerComp /> */}
-      <Todos/>
+      {/* <Todos/> */}
       {/* <FetchComp/> */}
-      {/* <FetchComp2/> */}
+      <FetchComp2/>
       {/* <NewForm /> */}
     </div>
   );
