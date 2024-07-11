@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bowlby+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet"/>
+    <title>Certificate</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding-bottom: 10px;
+      }
+      .certificate {
+        background: #fff url("bg.JPEG") no-repeat center top;
+        background-size: cover;
+        width: 1020px;
+        height: 700px;
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      .header {
+        text-align: center;
+        margin-top: 140px;
+        margin-bottom: 0px;
+        margin-left: 135px;
+        color: #750e21;
+      }
+      .input p {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-weight: 550;
+        font-size: large;
+      }
+      .input .name,
+      .info,
+      .info2 {
+        margin-bottom: 10px;
+        color: #a0153e;
+      }
+      .name,
+      .info,
+      .info2 {
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        width: 100%;
+        margin-left: 10px;
+        border-bottom: 1px solid #a0153e;
+        background: transparent;
+      }
+      .name {
+        width: 552px;
+      }
+      .info {
+        width: 549.5px;
+      }
+      .info2 {
+        width: 508px;
+      }
+      .content {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+        margin-left: 140px;
+        border: solid;
+        border-width: 2px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        width: 72%;
+        height: 30%;
+        border-color: #9d0b28;
+        background-color: #9d0b28;
+      }
+      .box {
+        border: solid;
+        border-color: #ffffff;
+        border-top-right-radius: 35.5px;
+        border-bottom-left-radius: 35.5px;
+        width: 98.8%;
+        height: 96%;
+        margin-top: 4px;
+        margin-left: 4px;
+        border-width: 1.4px;
+      }
+      .content h1 {
+        font-size: 50px;
+        color: #f6c90e;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        text-align: start;
+        margin-left: 70px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: #fff;
+      }
+      .content h2 {
+        font-size: 42px;
+        color: #ffffff;
+        font-family: "Rakkas";
+        font-weight: 400;
+        font-style: normal;
+        text-align: start;
+        margin-left: 70px;
+        margin-top: 0;
+        margin-bottom: -14px;
+      }
+      .content p {
+        font-size: 20px;
+        color: #fff;
+        font-family: "Playfair Display", serif;
+        margin-top: 0.5px;
+        margin-bottom: 0px;
+        letter-spacing: 0.8px;
+      }
+      .content p2 {
+        font-size: 14px;
+        color: #fff;
+        font-family: "Libre Baskerville", serif;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        letter-spacing: 0.8px;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .editable-paragraph {
+        width: 90%;
+        height: 80%;
+        font-size: 18.5px;
+        font-family: "Kanit", sans-serif;
+        letter-spacing: 0.2px;
+        color: #750e21;
+        border-style: none;
+        background: transparent;
+        border-radius: 5px;
+        resize: none;
+        outline: none;
+        text-align: center;
+      }
+      .certificate::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        background: url("illustration-image-url") no-repeat center center;
+        background-size: cover;
+      }
+      .input {
+        display: flex;
+        width: 70%;
+        margin-left: 40px;
+        box-sizing: border-box;
+        border: none;
+        display: flex;
+      }
+      .logo {
+        height: 35%;
+        width: auto;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 750px;
+      }
+      .badge {
+        width: 4.6%;
+        position: absolute;
+        left: 443.5px;
+        top: 386px;
+      }
+      .icon {
+        height: 16%;
+        width: auto;
+        position: absolute;
+        margin-left: 440px;
+      }
+      .present {
+        position: absolute;
+        width: 220px;
+        height: 80px;
+        margin-top: 590px;
+        margin-left: 190px;
+      }
+      .seal {
+        position: absolute;
+        width: 115px;
+        height: 115px;
+        margin-top: 568px;
+        margin-left: 480px;
+      }
+      .vp {
+        position: absolute;
+        width: 152px;
+        height: 120px;
+        margin-top: 554px;
+        margin-left: 685px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="certificate">
+      <img class="logo" src="logo.png" alt="logo" />
+      <img class="icon" src="icon.png" alt="icon" />
+      <img class="present" src="presedent.png" alt="present" />
+      <img class="seal" src="seal.png" alt="seal" />
+      <img class="vp" src="vp.png" alt="vp" />
+      <div class="header">
+        <div class="input">
+          <div>
+            <label class="label"><p contenteditable="true">Kumara</p></label>
+          </div>
+          <div>
+            <input type="text" class="name" />
+          </div>
+        </div>
+        <div class="input">
+          <div>
+            <label class="label"> <p contenteditable="true">Son of</p></label>
+          </div>
+          <div>
+            <input type="text" class="info" />
+          </div>
+        </div>
+        <div class="input">
+          <div>
+            <label class="label">
+              <p contenteditable="true">Residing at</p></label>
+          </div>
+          <div>
+            <input type="text" class="info2" />
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="box">
+          <p>Participated in the</p>
+          <h2 contenteditable="true">World Ramayana</h2>
+          <h1>
+            <span>Champi -<img src="badge.png" alt="badge" class="badge" />-nship -</span>
+            <span contenteditable="true">2024</span>
+          </h1>
+          <p2>
+            <span>Conducted in the month of </span>
+            <span contenteditable="true">January 2024</span>
+          </p2>
+        </div>
+      </div>
+      <div class="footer">
+        <textarea class="editable-paragraph">In recognition of your commendable participation in the international event, we hereby present the certificate as a token of appreciation.</textarea>
+      </div>
+    </div>
+  </body>
+</html>
