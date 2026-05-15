@@ -76,3 +76,21 @@ Easy Summary Table
 | Function  | `function(){}` | Coffee machine          |
 
 */
+
+
+/* 
+Primitive Types List
+ALL primitive data types in JavaScript are IMMUTABLE
+Their original value cannot be changed after creation.
+
+| Primitive Type | Mutable / Immutable |
+| -------------- | ------------------- |
+| undefined      | Immutable           |
+| null           | Immutable           |
+| boolean        | Immutable           |
+| number         | Immutable           |
+| string         | Immutable           |
+| symbol         | Immutable           |
+| bigint         | Immutable           |
+
+*/
