@@ -31,11 +31,11 @@ JavaScript Has 2 Main Categories
 
 /*
     Primitive Data Types: JavaScript has 7 primitive data types.
-    1. String
-    2. Number
+    1. Undefined
+    2. Null
     3. Boolean
-    4. Undefined
-    5. Null
+    4. Number
+    5. String
     6. Symbol
     7. BigInt
 */
@@ -51,4 +51,28 @@ JavaScript Has 2 Main Categories
     7. Set 
     8. WeakMap 
     9. WeakSet 
+*/
+
+/*
+| Primitive           | Non-Primitive    |
+| ------------------- | ---------------- |
+| Stores actual value | Stores reference |
+| Immutable           | Mutable          |
+| Simple              | Complex          |
+
+
+Easy Summary Table
+| Data Type | Example        | Real-Life Analogy       |
+| --------- | -------------- | ----------------------- |
+| String    | `"Hello"`      | Written text            |
+| Number    | `100`          | Calculator number       |
+| Boolean   | `true`         | ON/OFF switch           |
+| Undefined | `let x;`       | Empty box               |
+| Null      | `null`         | Intentionally empty box |
+| Symbol    | `Symbol()`     | Fingerprint             |
+| BigInt    | `999n`         | Huge storage tank       |
+| Object    | `{}`           | ID card                 |
+| Array     | `[]`           | Train compartments      |
+| Function  | `function(){}` | Coffee machine          |
+
 */
