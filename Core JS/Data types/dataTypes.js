@@ -53,6 +53,30 @@ JavaScript Has 2 Main Categories
     9. WeakSet 
 */
 
+/* 
+JavaScript Data Types
+│
+├── Primitive Types
+│   ├── undefined
+│   ├── null
+│   ├── boolean
+│   ├── number
+│   ├── string
+│   ├── symbol
+│   └── bigint
+│
+└── Non-Primitive (Reference Types)
+    ├── Object
+    ├── Array
+    ├── Function
+    ├── Date
+    ├── RegExp
+    ├── Map
+    ├── Set
+    ├── WeakMap
+    └── WeakSet
+*/
+
 /*
 | Primitive           | Non-Primitive    |
 | ------------------- | ---------------- |
